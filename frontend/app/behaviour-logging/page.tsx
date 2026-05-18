@@ -158,7 +158,51 @@ export default function BehaviorLoggingPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-foreground">Duration (hours/minutes)</label>
+                {["Study Hours", "Focus Sessions", "Sleep Hours", "Screen Time"].includes(category) && (
+  <div className="space-y-2">
+    <label className="block text-sm font-medium text-foreground">
+      Duration (hours/minutes)
+    </label>
+
+    <input
+      type="number"
+      value={duration}
+      onChange={(e) => setDuration(e.target.value)}
+      className="w-full px-3 py-2 bg-[#1f1631] text-white border border-gray-600 rounded"
+      placeholder="Enter time"
+    />
+  </div>
+)}
+
+{["Mood", "Stress Level", "Motivation", "Energy", "Routine Score"].includes(category) && (
+  <div className="space-y-2">
+    <label className="block text-sm font-medium text-foreground">
+      Scale (1-10)
+    </label>
+
+    <input
+      type="number"
+      min="1"
+      max="10"
+      className="w-full px-3 py-2 bg-[#1f1631] text-white border border-gray-600 rounded"
+      placeholder="Enter scale"
+    />
+  </div>
+)}
+
+{category === "Tasks Planned/Completed" && (
+  <div className="space-y-2">
+    <label className="block text-sm font-medium text-foreground">
+      Tasks Completed
+    </label>
+
+    <input
+      type="text"
+      className="w-full px-3 py-2 bg-[#1f1631] text-white border border-gray-600 rounded"
+      placeholder="Example: 3/5"
+    />
+  </div>
+)}
                 <input
                   type="number"
                   value={duration}
