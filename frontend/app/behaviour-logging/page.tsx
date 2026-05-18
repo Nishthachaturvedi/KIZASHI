@@ -7,15 +7,17 @@ import { useRouter } from 'next/navigation';
 import { apiClient } from '@/lib/api/client';
 
 const BEHAVIOR_CATEGORIES = [
-  'Exercise',
-  'Work Focus',
-  'Sleep',
-  'Stress',
-  'Social Interaction',
-  'Meditation',
-  'Nutrition',
-  'Screen Time',
-];
+  "Study Hours",
+  "Focus Sessions",
+  "Tasks Planned/Completed",
+  "Sleep Hours",
+  "Screen Time",
+  "Routine Score",
+  "Mood",
+  "Stress Level",
+  "Motivation",
+  "Energy"
+]
 
 interface LogEntry {
   id: string;
@@ -150,7 +152,7 @@ export default function BehaviorLoggingPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-foreground">Duration (minutes)</label>
+                <label className="block text-sm font-medium text-foreground">Duration (hours/minutes)</label>
                 <input
                   type="number"
                   value={duration}
