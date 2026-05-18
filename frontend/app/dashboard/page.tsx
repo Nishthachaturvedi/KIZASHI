@@ -161,9 +161,7 @@ export default function DashboardPage() {
     { name: "Sun", score: 88 },
   ]}
 />
-            type="area"
-            color="oklch(0.55 0.22 257)"
-          
+
           <AnalyticsChart
   title="Wellness Metrics"
   data={[

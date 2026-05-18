@@ -112,9 +112,7 @@ export default function ProductivityPage() {
           { name: "Sun", score: 88 },
           ]}
           />
-            type="area"
-            color="oklch(0.55 0.22 257)"
-          
+           
         </motion.div>
 
         <motion.div className="glass glow p-6 space-y-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
