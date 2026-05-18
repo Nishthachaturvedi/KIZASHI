@@ -140,11 +140,17 @@ export default function BehaviorLoggingPage() {
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   disabled={submitting}
-                  className="w-full px-3 py-2 glass-sm outline-none rounded disabled:opacity-50 cursor-pointer"
+                 className="w-full px-3 py-2 bg-[#1f1631] text-white border border-gray-600 rounded"
                 >
-                  <option value="">Select category</option>
+                  <option value="" className="bg-[#1f1631] text-white">
+                  Select category
+                  </option>
                   {BEHAVIOR_CATEGORIES.map((cat) => (
-                    <option key={cat} value={cat}>
+                    <option
+                   key={cat}
+                   value={cat}
+                   className="bg-[#1f1631] text-white"
+>
                       {cat}
                     </option>
                   ))}
