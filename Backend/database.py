@@ -1,9 +1,11 @@
 from pymongo import MongoClient
 import os
-client = MongoClient(os.getenv("mongodb+srv://kizashi:kizashi2026@cluster0.agln8yx.mongodb.net/?appName=Cluster0"))
+
+MONGO_URL = os.getenv("MONGO_URL")
+
+client = MongoClient(MONGO_URL)
 
 db = client["kizashi"]
-
 # Collections
 users_collection = db["users"]
 behaviour_collection = db["behaviour"]  # Daily behavior metrics
