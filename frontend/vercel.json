@@ -5,7 +5,6 @@
   "env": {
     "NEXT_PUBLIC_API_BASE_URL": "@api_base_url"
   },
-  "envPrefix": "NEXT_PUBLIC_",
   "git": {
     "silent": false
   },
