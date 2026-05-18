@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-
-client = MongoClient("mongodb://localhost:27017")
+import os
+client = MongoClient(os.getenv("mongodb+srv://kizashi:kizashi2026@cluster0.agln8yx.mongodb.net/?appName=Cluster0"))
 
 db = client["kizashi"]
 
