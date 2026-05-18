@@ -1,5 +1,5 @@
-from fastapi import FastAPI
 
+from fastapi import FastAPI
 from routes.auth import router as auth_router
 from routes.behaviour import router as behaviour_router
 from routes.analytics import router as analytics_router
@@ -9,16 +9,18 @@ from routes.drift import router as drift_router
 from routes.recommendations import router as recommendations_router
 from routes.risk import router as risk_router
 from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://kizashi-sigma.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 app.include_router(risk_router)
 app.include_router(drift_router)
